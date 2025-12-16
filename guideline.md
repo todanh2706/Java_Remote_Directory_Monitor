@@ -1,4 +1,4 @@
-1. Giai đoạn Thiết kế (Design Phase)
+## 1. Giai đoạn Thiết kế (Design Phase)
 
 -   Thiết kế Giao thức (Protocol): Xác định định dạng dữ liệu gửi qua lại.
     -   Ví dụ: Object bao gồm type (CONNECT, MONITOR_REQ, CHANGE_NOTIFY) và payload (dữ liệu).
@@ -6,7 +6,7 @@
     -   Server: Bảng danh sách Client, nút chọn thư mục, khung log hiển thị thay đổi.
     -   Client: Form nhập IP Server, nút kết nối, trạng thái đang chạy.
 
-2. Giai đoạn Backend (Core Logic)
+## 2. Giai đoạn Backend (Core Logic)
 
 -   Module Common:
     -   Tạo các Class Message hoặc Request/Response (phải implements Serializable) để gửi object qua mạng.
@@ -19,7 +19,7 @@
     -   Đa luồng: Mỗi khi có Client kết nối, tạo một Thread mới để quản lý Client đó (ClientHandler).
     -   Lưu danh sách các ClientHandler vào một List để quản lý.
 
-3. Giai đoạn Frontend (Swing GUI)
+## 3. Giai đoạn Frontend (Swing GUI)
 
 -   Client GUI:
     -   Gắn logic kết nối vào nút "Connect".
@@ -29,7 +29,7 @@
     -   Tạo dialog hoặc input để Server gửi yêu cầu "Giám sát thư mục X" tới Client.
     -   TextArea hoặc Table để hiển thị log thay đổi file nhận từ Client.
 
-4. Tích hợp & Kiểm thử
+## 4. Tích hợp & Kiểm thử
 
 -   Xử lý ngắt kết nối đột ngột (Client tắt máy thì Server phải xóa khỏi danh sách).
 -   Test với đường dẫn thư mục có dấu Tiếng Việt.
